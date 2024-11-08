@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkeffortlessdevsec=self.webpackChunkeffortlessdevsec||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/effortlesssecurity/blog","blogTitle":"Blog","authorsListPath":"/effortlesssecurity/blog/authors"}')}}]);
