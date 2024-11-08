@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Learn Devsecops/doc-markdown" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">Supply Chain Security | EffortlessSecurity</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://github.com/supply chain security"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Supply Chain Security | EffortlessSecurity"><meta data-rh="true" name="description" content="Why is Supply Chain Security more important than ever? As organizations rely on third-party vendors, securing every link is crucial to prevent disruptions, protect sensitive data, and maintain trust across the entire supply chain.
+"><meta data-rh="true" property="og:description" content="Why is Supply Chain Security more important than ever? As organizations rely on third-party vendors, securing every link is crucial to prevent disruptions, protect sensitive data, and maintain trust across the entire supply chain.
+"><meta data-rh="true" name="keywords" content="supply chain security,devsecops"><meta data-rh="true" property="og:image" content="https://2smart.com/wp-content/uploads/2023/06/006-optimized.png&#x27;"><meta data-rh="true" name="twitter:image" content="https://2smart.com/wp-content/uploads/2023/06/006-optimized.png&#x27;"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://github.com/supply chain security"><link data-rh="true" rel="alternate" href="https://github.com/supply chain security" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/supply chain security" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="EffortlessSecurity RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="EffortlessSecurity Atom Feed"><link rel="stylesheet" href="/assets/css/styles.51e2fedf.css">
+<script src="/assets/js/runtime~main.fc389708.js" defer="defer"></script>
+<script src="/assets/js/main.8a87aac5.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Effortlesssec</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/intro">Blogs</a><a class="navbar__item navbar__link" href="/projects">Projects</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/effortlessdevsec" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/intro">Home</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item red"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--active" href="/category/learn-devsecops">Learn Devsecops</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Learn Devsecops/Overview About Github Actions">Overview About Github Actions</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Learn Devsecops/SCA IN DEVSECOPS">Source Composition Analysis</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/supply chain security">Supply Chain Security</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/category/learn-devsecops"><span itemprop="name">Learn Devsecops</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Supply Chain Security</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Why Software Supply Chain Security Matters ?</h1></header>
+<p><img decoding="async" loading="lazy" alt="Software Supply Chain Security" src="/assets/images/supply1-df7fcca9944331a0e033a37e6c6956dd.png" width="1792" height="1024" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h2>
+<p style="text-align:justify"></p><p>As a security engineer in the R&amp;D team at a cybersecurity company, I&#x27;ve come to realize the growing importance of securing the software supply chain. With open-source and third-party code libraries playing such a crucial role in modern development, it&#x27;s essential to ensure that every component in the software supply chain is secure. Ignoring this can lead to severe consequences — not just from a technical standpoint, but also in terms of trust and reputation.</p><p>My work involves researching and identifying tools that can help detect vulnerabilities, license issues, and malicious threats within the software supply chain. I’m also developing an event-driven platform that automates the use of multi-layered security scanning tools to provide comprehensive threat detection. This platform aims to enhance decision-making throughout the software development lifecycle, making it easier to spot and address risks before they become serious problems.</p><p>In this article, I’ll discuss why securing the software supply chain is so critical. I’ll dive into the risks associated with insecure open-source libraries and code dependencies, including vulnerabilities, malware, hardcoded secrets, and more.</p><p></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-a-software-supply-chain">What is a Software Supply Chain?<a href="#what-is-a-software-supply-chain" class="hash-link" aria-label="Direct link to What is a Software Supply Chain?" title="Direct link to What is a Software Supply Chain?">​</a></h2>
+<p style="text-align:justify"></p><p>In the context of software, the supply chain refers to all the components, tools, services, and libraries used to develop, build, and maintain an application. This includes:</p><ul>
+<li><strong>Open-source libraries and frameworks (e.g., React, lodash)</strong></li>
+<li><strong>Third-party APIs or services integrated into the software</strong></li>
+<li><strong>Build tools (e.g., compilers, CI/CD tools)</strong></li>
+<li><strong>Code dependencies (both internal and external)</strong></li>
+<li><strong>Software vendors providing solutions that are embedded or rely on the software</strong></li>
+</ul><p></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-software-supply-chain-security">What is Software Supply Chain Security?<a href="#what-is-software-supply-chain-security" class="hash-link" aria-label="Direct link to What is Software Supply Chain Security?" title="Direct link to What is Software Supply Chain Security?">​</a></h2>
+<p>Software supply chain security focuses on ensuring the integrity and safety of all the elements within the software development process, from the coding phase to deployment. Given that many software applications rely heavily on open-source libraries, third-party APIs, and external services, any vulnerability in these components can be a potential point of attack.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-aspects-of-software-supply-chain-security">Key Aspects of Software Supply Chain Security:<a href="#key-aspects-of-software-supply-chain-security" class="hash-link" aria-label="Direct link to Key Aspects of Software Supply Chain Security:" title="Direct link to Key Aspects of Software Supply Chain Security:">​</a></h3>
+<ol>
+<li>
+<p><strong>Managing Dependencies</strong>:<br>
+<!-- -->Ensuring that external libraries and components are secure, up-to-date, and trusted. Vulnerabilities in these dependencies can lead to breaches if not properly maintained.</p>
+</li>
+<li>
+<p><strong>Securing Build Pipelines</strong>:<br>
+<!-- -->The CI/CD (Continuous Integration/Continuous Deployment) pipeline, which automates the process of testing, building, and deploying software, must be protected from attacks that could inject malicious code or alter the build process.</p>
+</li>
+<li>
+<p><strong>Verifying Third-Party Code</strong>:<br>
+<!-- -->Ensuring that any code or services provided by third-party vendors or integrated APIs are safe, trusted, and free of malware or security flaws.</p>
+</li>
+<li>
+<p><strong>Tracking Vulnerabilities</strong>:<br>
+<!-- -->Monitoring and addressing vulnerabilities in both internal and external components of the software. This includes identifying and patching flaws as they emerge in any part of the supply chain.</p>
+</li>
+<li>
+<p><strong>License Compliance</strong>:<br>
+<!-- -->Ensuring that all components are used in compliance with licensing terms, which can prevent legal risks and issues with proprietary code.</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="why-it-matters">Why It Matters<a href="#why-it-matters" class="hash-link" aria-label="Direct link to Why It Matters" title="Direct link to Why It Matters">​</a></h3>
+<p>In today’s interconnected software ecosystem, a breach in one part of the software supply chain — whether it’s a third-party library or an external API — can have cascading effects across the entire software product, compromising the security and functionality of applications.</p>
+<p>Supply chain attacks, like the <strong>SolarWinds hack</strong>, demonstrate the risks of malicious code being inserted into software dependencies, which can go undetected for long periods.</p>
+<p>Thus, securing the software supply chain is critical to prevent such attacks and protect sensitive data, user privacy, and overall system integrity.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-methods-of-software-supply-chain-attacks">Common Methods of Software Supply Chain Attacks<a href="#common-methods-of-software-supply-chain-attacks" class="hash-link" aria-label="Direct link to Common Methods of Software Supply Chain Attacks" title="Direct link to Common Methods of Software Supply Chain Attacks">​</a></h3>
+<p>Understanding common software supply chain attack methods and multi-layered scanning is crucial for addressing various threats. Here are some of the key techniques:</p>
+<ol>
+<li>
+<p><strong>Dependency Confusion</strong><br>
+<!-- -->Also known as the &quot;Supply Chain Substitution Attack,&quot; this method deploys malicious code by replacing legitimate application dependencies with compromised versions. Attackers may upload a copy of a legitimate library, but with additional malicious code, to deceive developers.</p>
+</li>
+<li>
+<p><strong>Typosquatting</strong><br>
+<!-- -->Typosquatting takes advantage of users&#x27; mistakes. For example, attackers may publish a package with a name similar to a well-known package (e.g., &#x27;Mongooes&#x27; instead of &#x27;Mongoose&#x27;) that contains malicious code. This exploits user inattention and can compromise systems.</p>
+</li>
+<li>
+<p><strong>Compromised Updates</strong><br>
+<!-- -->This attack involves hijacking or tampering with legitimate software updates to distribute malware. Attackers exploit the trust placed in update mechanisms to inject malicious code into software.</p>
+</li>
+<li>
+<p><strong>Revival Hijack (PyPi Attack — 2024)</strong><br>
+<!-- -->Revival hijacking is a technique in which attackers manipulate the option to re-register a package after it’s been removed from PyPI’s index by its original owner. The attacker can then publish malicious packages under the same name, but with a higher version, to infect developer environments.</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-secure-the-software-supply-chain">How to Secure the Software Supply Chain<a href="#how-to-secure-the-software-supply-chain" class="hash-link" aria-label="Direct link to How to Secure the Software Supply Chain" title="Direct link to How to Secure the Software Supply Chain">​</a></h3>
+<p>Securing the software supply chain involves implementing several key strategies and best practices to reduce the risks associated with dependencies, third-party code, build processes, and more. Here are some essential steps to secure the software supply chain:</p>
+<p><img decoding="async" loading="lazy" alt="Software Supply Chain Security" src="/assets/images/supplychain-ccbc60a053bf88fdd41696011512ed23.png" width="1792" height="1024" class="img_ev3q"></p>
+<ol>
+<li>
+<p><strong>Manage Dependencies Carefully</strong></p>
+<ul>
+<li><strong>Use Trusted Sources</strong>: Always source dependencies from reputable and trusted package managers or repositories (e.g., npm, Maven, PyPI).</li>
+<li><strong>Regularly Update Dependencies</strong>: Keep dependencies up-to-date to patch known vulnerabilities and minimize security risks.</li>
+<li><strong>Audit Dependencies</strong>: Continuously audit and scan dependencies for vulnerabilities using tools like Snyk, Dependabot, or OWASP Dependency-Check.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verify Third-Party Code</strong></p>
+<ul>
+<li><strong>Code Reviews</strong>: Ensure that third-party code or libraries are reviewed for security flaws before integrating them into your system.</li>
+<li><strong>Limit External Dependencies</strong>: Minimize reliance on third-party libraries or APIs, especially those that have not been actively maintained or widely used.</li>
+<li><strong>Use Signed Packages</strong>: Prefer packages that are cryptographically signed to ensure their integrity.</li>
+</ul>
+</li>
+<li>
+<p><strong>Secure the Build Pipeline</strong></p>
+<ul>
+<li><strong>Use Secure CI/CD Pipelines</strong>: Protect your Continuous Integration and Continuous Deployment (CI/CD) pipeline from attacks by enforcing strict access controls and validating all code before deployment.</li>
+<li><strong>Verify Build Integrity</strong>: Implement tools to verify the integrity of your build process to prevent malicious code injection during compilation.</li>
+<li><strong>Implement Multi-Factor Authentication (MFA)</strong>: Enforce MFA for all personnel involved in the build and deployment process to prevent unauthorized access.</li>
+</ul>
+</li>
+<li>
+<p><strong>Track Vulnerabilities</strong></p>
+<ul>
+<li><strong>Regular Vulnerability Scanning</strong>: Continuously scan both internal and external software components for vulnerabilities using automated scanning tools.</li>
+<li><strong>Security Patch Management</strong>: Implement a process for timely application of security patches to address discovered vulnerabilities.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ensure License Compliance</strong></p>
+<ul>
+<li><strong>Understand License Terms</strong>: Before using third-party components, thoroughly understand the licensing terms to avoid potential legal issues.</li>
+<li><strong>Use License Management Tools</strong>: Leverage tools to help track and manage open-source licenses, ensuring compliance with all terms and conditions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Monitor for Malicious Activity</strong></p>
+<ul>
+<li><strong>Continuous Monitoring</strong>: Implement real-time monitoring and logging to detect any unusual activity or signs of compromise in your supply chain.</li>
+<li><strong>Behavioral Analytics</strong>: Utilize behavioral analytics to identify anomalous patterns that could indicate supply chain attacks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implement Strong Authentication and Authorization</strong></p>
+<ul>
+<li><strong>Access Control</strong>: Use strong authentication and role-based access control (RBAC) to limit who can access the source code, dependencies, and deployment systems.</li>
+<li><strong>Zero Trust Model</strong>: Apply the principle of least privilege and ensure that no one, including internal personnel, can access more than what they need.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Secure Communication Channels</strong></p>
+<ul>
+<li><strong>TLS/SSL Encryption</strong>: Ensure that all communications between systems (including dependencies, APIs, and services) are encrypted using TLS/SSL to prevent interception and tampering.</li>
+<li><strong>Verify Digital Signatures</strong>: Use digital signatures to verify the authenticity of code and software packages.</li>
+</ul>
+</li>
+<li>
+<p><strong>Educate and Train Teams</strong></p>
+<ul>
+<li><strong>Security Training</strong>: Educate developers, security teams, and operations personnel on the latest supply chain threats and how to mitigate them.</li>
+<li><strong>Phishing Awareness</strong>: Train staff to recognize phishing attacks that may lead to supply chain breaches, such as by tricking users into downloading malicious dependencies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implement Incident Response Plans</strong></p>
+<ul>
+<li><strong>Supply Chain Incident Response</strong>: Develop and test incident response plans that specifically address supply chain attacks. Ensure that you can quickly identify, contain, and recover from attacks targeting the supply chain.</li>
+</ul>
+</li>
+</ol>
+<p>By following these best practices, you can significantly reduce the risk of software supply chain attacks and ensure the integrity of your software development process.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-are-the-common-method-attacks-in-the-software-supply-chain">What are the Common Method Attacks in the Software Supply Chain?<a href="#what-are-the-common-method-attacks-in-the-software-supply-chain" class="hash-link" aria-label="Direct link to What are the Common Method Attacks in the Software Supply Chain?" title="Direct link to What are the Common Method Attacks in the Software Supply Chain?">​</a></h3>
+<ul>
+<li><strong>Dependency Confusion</strong></li>
+<li><strong>Typosquatting</strong></li>
+<li><strong>Compromised Updates</strong></li>
+<li><strong>Revival Hijack (PyPi attack — 2024)</strong></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="approach-to-defending--software-supply-chain">Approach to defending  software supply chain:<a href="#approach-to-defending--software-supply-chain" class="hash-link" aria-label="Direct link to Approach to defending  software supply chain:" title="Direct link to Approach to defending  software supply chain:">​</a></h2>
+<ol>
+<li>
+<p><strong>Verify Dependency Integrity</strong>: Regularly validate the integrity of all dependencies. Use checksums and digital signatures to ensure each dependency hasn&#x27;t been tampered with.</p>
+</li>
+<li>
+<p><strong>Leverage SCA Tools (like Snyk)</strong>: Use Software Composition Analysis (SCA) tools such as Snyk to identify vulnerabilities in your dependencies. Automate scans in your CI/CD pipeline to catch issues early.</p>
+</li>
+<li>
+<p><strong>Track Dependency Changes</strong>: Maintain an SBOM (Software Bill of Materials) to keep track of all dependencies. Use tools like Dependency Track to continuously monitor these components for new vulnerabilities.</p>
+</li>
+<li>
+<p><strong>Apply Updates Promptly</strong>: Regularly update dependencies to mitigate risks from known vulnerabilities. Set up automated notifications to ensure your components are always up-to-date.</p>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/tags/supply-chain-security">supply chain security</a></li><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/tags/devsecops">devsecops</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Learn Devsecops/Supply Chain Security.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Learn Devsecops/SCA IN DEVSECOPS"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Source Composition Analysis</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link toc-highlight">Introduction</a></li><li><a href="#what-is-a-software-supply-chain" class="table-of-contents__link toc-highlight">What is a Software Supply Chain?</a></li><li><a href="#what-is-software-supply-chain-security" class="table-of-contents__link toc-highlight">What is Software Supply Chain Security?</a><ul><li><a href="#key-aspects-of-software-supply-chain-security" class="table-of-contents__link toc-highlight">Key Aspects of Software Supply Chain Security:</a></li><li><a href="#why-it-matters" class="table-of-contents__link toc-highlight">Why It Matters</a></li><li><a href="#common-methods-of-software-supply-chain-attacks" class="table-of-contents__link toc-highlight">Common Methods of Software Supply Chain Attacks</a></li><li><a href="#how-to-secure-the-software-supply-chain" class="table-of-contents__link toc-highlight">How to Secure the Software Supply Chain</a></li><li><a href="#what-are-the-common-method-attacks-in-the-software-supply-chain" class="table-of-contents__link toc-highlight">What are the Common Method Attacks in the Software Supply Chain?</a></li></ul></li><li><a href="#approach-to-defending--software-supply-chain" class="table-of-contents__link toc-highlight">Approach to defending  software supply chain:</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
