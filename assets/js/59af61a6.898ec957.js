@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkeffortlessdevsec=self.webpackChunkeffortlessdevsec||[]).push([[9174],{5332:e=>{e.exports=JSON.parse('{"tags":[{"label":"devsecops","permalink":"/tags/devsecops","count":4},{"label":"Github","permalink":"/tags/github","count":3},{"label":"supply chain security","permalink":"/tags/supply-chain-security","count":1}]}')}}]);

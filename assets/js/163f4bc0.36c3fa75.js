@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkeffortlessdevsec=globalThis.webpackChunkeffortlessdevsec||[]).push([[8834],{1384(e){e.exports=JSON.parse('{"pageTitle":"Open Source Projects","pageDescription":"About me."}')}}]);
