@@ -2,50 +2,45 @@
 sidebar_position: 1
 title: Home
 authors: [Amit]
-tags: [devsecops, Github]
+tags: [devsecops, github, application-security]
 ---
----
 
-# Tutorial Intro
+# EffortlessSecurity
 
-Let's discover **Docusaurus in less than 5 minutes**.
+A practical security learning space built by Amit Kumar, focused on real-world AppSec, DevSecOps, cloud security, and mobile testing.
 
-## Getting Started
+## What you will find here
 
-Get started by **creating a new site**.
+- Practical DevSecOps notes and walkthroughs
+- Security-focused writing on software supply chain risk
+- GitHub Actions and CI/CD security learning
+- Mobile AppSec and product security perspectives
+- Hands-on blog posts designed for engineers and security practitioners
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Core focus areas
 
-### What you'll need
+### Application Security
+Security reviews, secure design thinking, code review strategy, and practical ways to reduce risk earlier in the SDLC.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### DevSecOps
+Guidance for integrating security into engineering workflows, CI/CD pipelines, automation, and developer-friendly security practices.
 
-## Generate a new site
+### Supply Chain Security
+Writing and learning resources around dependency risk, SCA, third-party trust, and secure software delivery.
 
-Generate a new Docusaurus site using the **classic template**.
+### Mobile Security
+Research-driven material related to Android, iOS, mobile testing approaches, and AppSec learning.
 
-The classic template will automatically be added to your project after you run the command:
+## Start reading
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+If you want to begin quickly, explore these pages:
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- [Overview About Github Actions](/effortlesssecurity/Learn%20Devsecops/Overview%20About%20Github%20Actions)
+- [Source Composition Analysis](/effortlesssecurity/Learn%20Devsecops/SCA%20IN%20DEVSECOPS)
+- [Supply Chain Security](/effortlesssecurity/supply%20chain%20security)
+- [Portfolio](/effortlesssecurity/portfolio)
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## About this blog
 
-## Start your site
+This site is designed to keep learning simple: choose a topic, open the related posts, and go straight into useful technical content.
 
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

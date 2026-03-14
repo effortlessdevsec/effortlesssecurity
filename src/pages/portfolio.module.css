@@ -1,0 +1,629 @@
+.pageWrap {
+  background: var(--ifm-background-color);
+}
+
+.heroSection {
+  padding: 5rem 0 4rem;
+  background:
+    radial-gradient(circle at top left, rgba(72, 187, 255, 0.2), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(95, 255, 196, 0.18), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #0d1b2a 45%, #10283f 100%);
+  animation: fadeUp 0.9s ease both;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.8fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroEyebrow,
+.eyebrow {
+  display: inline-flex;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #8ae8ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  margin: 1rem 0;
+  color: #f8fbff;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.08;
+}
+
+.heroText {
+  max-width: 42rem;
+  margin: 0 0 1.5rem;
+  color: rgba(248, 251, 255, 0.82);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.summaryCard {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.9rem;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(9, 22, 36, 0.92), rgba(16, 40, 63, 0.82));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+.summaryIntro h2 {
+  margin: 0.55rem 0 0.7rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.summaryIntro p {
+  margin: 0;
+  color: rgba(248, 251, 255, 0.76);
+  line-height: 1.7;
+}
+
+.summaryLabel {
+  display: inline-flex;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(95, 229, 255, 0.12);
+  border: 1px solid rgba(95, 229, 255, 0.18);
+  color: #8ae8ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.summaryStat {
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.summaryStat strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #ffffff;
+  font-size: 1.65rem;
+}
+
+.summaryStat span {
+  color: rgba(248, 251, 255, 0.74);
+  line-height: 1.5;
+}
+
+.heroList {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.heroListItem {
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr);
+  align-items: start;
+  gap: 0.85rem;
+}
+
+.heroListItem p {
+  margin: 0;
+  color: rgba(248, 251, 255, 0.8);
+  line-height: 1.7;
+}
+
+.heroListDot {
+  width: 14px;
+  height: 14px;
+  margin-top: 0.45rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, #8ae8ff 0%, #00b3ff 65%, rgba(0, 179, 255, 0.15) 100%);
+  box-shadow: 0 0 18px rgba(95, 229, 255, 0.55);
+}
+
+.sectionBlock,
+.sectionBlockAlt {
+  padding: 4.5rem 0;
+}
+
+.sectionBlockAlt {
+  background: linear-gradient(180deg, rgba(16, 40, 63, 0.04), rgba(16, 40, 63, 0.1));
+}
+
+.sectionHeader {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+.sectionHeader h2 {
+  margin: 0.85rem 0 0.75rem;
+  font-size: 2rem;
+}
+
+.sectionHeader p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.7;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.projectCard,
+.infoCard,
+.experienceCard {
+  position: relative;
+  display: block;
+  padding: 1.6rem;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(16, 40, 63, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  overflow: hidden;
+}
+
+.projectCard::after,
+.infoCard::after,
+.experienceCard::after,
+.skillMeter::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(0, 179, 255, 0), rgba(95, 229, 255, 0.95), rgba(0, 179, 255, 0));
+  opacity: 0;
+  transform: translateX(-130%);
+  transition: opacity 0.22s ease;
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.projectCard {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projectCard:hover,
+.infoCard:hover,
+.experienceCard:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+  border-color: rgba(0, 179, 255, 0.2);
+  text-decoration: none;
+}
+
+.projectCard:hover::after,
+.infoCard:hover::after,
+.experienceCard:hover::after,
+.skillMeter:hover::after {
+  opacity: 1;
+  animation: borderSweep 1.15s linear infinite;
+}
+
+.cardMeta,
+.eventBadge {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(0, 179, 255, 0.1);
+  color: #006b98;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.projectCard h3,
+.infoCard h3 {
+  margin-bottom: 0.75rem;
+}
+
+.projectCard p,
+.infoCard p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.7;
+}
+
+.cardLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+.skillsPanel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: var(--ifm-card-background-color);
+  border: 1px solid rgba(16, 40, 63, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  animation: fadeUp 0.9s ease both;
+}
+
+.skillMeter {
+  position: relative;
+  padding: 1rem 1rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(0, 179, 255, 0.04);
+  border: 1px solid rgba(0, 179, 255, 0.08);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  overflow: hidden;
+}
+
+.skillMeter:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.skillMeterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.skillMeterHeader span {
+  font-weight: 600;
+}
+
+.skillMeterHeader strong {
+  color: var(--ifm-color-primary);
+}
+
+.skillTrack {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(16, 40, 63, 0.08);
+  overflow: hidden;
+}
+
+.skillFill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #00b3ff, #5fe5ff);
+  box-shadow: 0 0 18px rgba(0, 179, 255, 0.28);
+  animation: fillBar 1.4s ease forwards;
+}
+
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.stackList {
+  display: grid;
+  gap: 1rem;
+}
+
+.experienceFlow {
+  position: relative;
+  display: grid;
+  gap: 1.75rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.experienceFlow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 26px;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(0, 179, 255, 0.08), rgba(95, 229, 255, 0.06));
+}
+
+.experienceFlow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 23px;
+  width: 10px;
+  height: 92px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(95, 229, 255, 0.95), rgba(0, 179, 255, 0));
+  filter: blur(1px);
+  animation: flowDrop 3.2s linear infinite;
+}
+
+.experienceStep {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: start;
+  column-gap: 1.25rem;
+  opacity: 0;
+  transform: translateY(22px);
+  animation: timelineReveal 0.8s ease forwards;
+  animation-delay: calc(var(--step-index) * 0.18s);
+}
+
+.experienceNode {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00b3ff, #5fe5ff);
+  color: #07111f;
+  font-weight: 800;
+  box-shadow: 0 0 0 8px rgba(0, 179, 255, 0.08), 0 0 30px rgba(95, 229, 255, 0.22);
+  animation: pulseNode 2.4s ease-in-out infinite;
+}
+
+.experienceNode::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(95, 229, 255, 0.28), transparent 70%);
+  z-index: -1;
+}
+
+.experienceConnector {
+  position: absolute;
+  top: 52px;
+  left: 25px;
+  width: 4px;
+  height: calc(100% + 1.2rem);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(0, 179, 255, 0.72), rgba(95, 229, 255, 0.12));
+}
+
+.experienceCard {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.experienceCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 179, 255, 0.06), transparent 40%, rgba(95, 229, 255, 0.08));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.experienceCard:hover::before {
+  opacity: 1;
+}
+
+.highlightList {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.highlightList li {
+  margin-bottom: 0.7rem;
+  line-height: 1.7;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--skill-level);
+  }
+}
+
+@keyframes pulseNode {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(0, 179, 255, 0.08);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 14px rgba(0, 179, 255, 0.04);
+  }
+}
+
+@keyframes flowDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(100% + 24px));
+  }
+}
+
+@keyframes borderSweep {
+  0% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+@keyframes timelineReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-theme='dark'] .sectionBlockAlt {
+  background: linear-gradient(180deg, rgba(8, 17, 29, 0.72), rgba(12, 24, 39, 0.92));
+}
+
+[data-theme='dark'] .sectionHeader h2,
+[data-theme='dark'] .projectCard h3,
+[data-theme='dark'] .infoCard h3,
+[data-theme='dark'] .experienceCard h3,
+[data-theme='dark'] .skillMeterHeader span,
+[data-theme='dark'] .highlightList,
+[data-theme='dark'] .cardLink {
+  color: #f8fbff;
+}
+
+[data-theme='dark'] .sectionHeader p,
+[data-theme='dark'] .projectCard p,
+[data-theme='dark'] .infoCard p,
+[data-theme='dark'] .highlightList li {
+  color: rgba(220, 233, 245, 0.78);
+}
+
+[data-theme='dark'] .projectCard,
+[data-theme='dark'] .infoCard,
+[data-theme='dark'] .experienceCard,
+[data-theme='dark'] .skillsPanel {
+  background: linear-gradient(180deg, rgba(10, 22, 36, 0.96), rgba(13, 30, 49, 0.98));
+  border-color: rgba(95, 229, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme='dark'] .projectCard:hover,
+[data-theme='dark'] .infoCard:hover,
+[data-theme='dark'] .experienceCard:hover,
+[data-theme='dark'] .skillMeter:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+  border-color: rgba(95, 229, 255, 0.18);
+}
+
+[data-theme='dark'] .cardMeta,
+[data-theme='dark'] .eventBadge {
+  background: rgba(95, 229, 255, 0.1);
+  color: #8cf0ff;
+}
+
+[data-theme='dark'] .skillMeter {
+  background: rgba(95, 229, 255, 0.05);
+  border-color: rgba(95, 229, 255, 0.08);
+}
+
+[data-theme='dark'] .skillTrack {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .experienceFlow::before {
+  background: linear-gradient(180deg, rgba(95, 229, 255, 0.12), rgba(91, 132, 255, 0.08));
+}
+
+[data-theme='dark'] .experienceConnector {
+  background: linear-gradient(180deg, rgba(95, 229, 255, 0.72), rgba(91, 132, 255, 0.14));
+}
+
+@media screen and (max-width: 996px) {
+  .heroGrid,
+  .projectGrid,
+  .twoColumnGrid,
+  .skillsPanel,
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .experienceFlow {
+    padding-left: 0.5rem;
+  }
+
+  .experienceStep {
+    min-width: 0;
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 1rem;
+  }
+
+  .experienceNode {
+    width: 44px;
+    height: 44px;
+  }
+
+  .experienceFlow::before,
+  .experienceConnector {
+    left: 20px;
+  }
+
+  .experienceConnector {
+    top: 44px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .summaryCard,
+  .projectCard,
+  .infoCard,
+  .skillsPanel {
+    padding: 1.25rem;
+  }
+}

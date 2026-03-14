@@ -1,92 +1,73 @@
 import React from 'react';
-import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
-import categories from '../../../docs/category.json';
 
-const baseUrl = '/category/';
-const basetag = '/tags/';
-
-
-const FeatureList = [
+const discoveryGroups = [
   {
-    title: 'Category Labels',
-    Svg: require('@site/static/img/programming-monitor.svg').default,
-    description: (
-      <>
-        <div className="container">
-         
-          <div id="categories">
-            <ul>
-              {categories.map((category, idx) => {
-                // Render the label
-                if (category.label) {
-                  return (
-                    <li key={idx}>
-                      <a href={`${baseUrl}${encodeURIComponent(category.label.toLowerCase().replace(/\s+/g, '-'))}`}>
-                        {category.label}
-                      </a>
-                    </li>
-                  );
-                }
-                return null;
-              })}
-            </ul>
-          </div>
-        </div>
-      </>
-    ),
+    label: 'Category',
+    title: 'Learn DevSecOps',
+    description: 'A dedicated category page for your DevSecOps blog collection.',
+    links: [
+      {
+        label: 'Open category',
+        to: '/category/learn-devsecops',
+      },
+    ],
   },
   {
-    title: 'Tags',
-    Svg: require('@site/static/img/programming-monitor.svg').default,
-    description: (
-      <>
-        <div className="container">
-        
-          <div id="categories">
-            <ul>
-              {categories.map((category, idx) => {
-                // Render the tag
-                if (category.tag) {
-                  return (
-                    <li key={idx}>
-                      <a href={`${basetag}${encodeURIComponent(category.tag.toLowerCase().replace(/\s+/g, '-'))}`}>
-                        {category.tag}
-                      </a>
-                    </li>
-                  );
-                }
-                return null;
-              })}
-            </ul>
-          </div>
-        </div>
-      </>
-    ),
+    label: 'Tags',
+    title: 'Browse filtered blog topics',
+    description: 'Open filtered blog views based on the tags already used across your posts.',
+    links: [
+      {
+        label: 'DevSecOps',
+        to: '/tags/devsecops',
+      },
+      {
+        label: 'GitHub',
+        to: '/tags/github',
+      },
+      {
+        label: 'Supply Chain Security',
+        to: '/tags/supply-chain-security',
+      },
+    ],
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function TagList({items}) {
   return (
-    <div className={clsx('col col--6')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+    <div className={styles.tagList}>
+      {items.map((item) => (
+        <Link key={item.label} className={styles.tagChip} to={item.to}>
+          {item.label}
+        </Link>
+      ))}
     </div>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.discoverySection}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+        <div className={styles.discoveryHeader}>
+          <span className={styles.discoveryEyebrow}>More ways to browse</span>
+          <h2>Open blogs through categories and tag filters.</h2>
+          <p>
+            This section keeps browsing simple: category pages show grouped posts, while tags open
+            filtered blog views for more specific topics.
+          </p>
+        </div>
+
+        <div className={styles.discoveryGrid}>
+          {discoveryGroups.map((group) => (
+            <div key={group.title} className={styles.discoveryCard}>
+              <span className={styles.discoveryLabel}>{group.label}</span>
+              <h3>{group.title}</h3>
+              <p>{group.description}</p>
+              <TagList items={group.links} />
+            </div>
           ))}
         </div>
       </div>
