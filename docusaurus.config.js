@@ -13,12 +13,12 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://github.com',
+  url: 'http://effortlesssecurity.in',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/effortlesssecurity',
+  // For custom domains, this is usually '/'
+  baseUrl: '/',
 
-  // GitHub pages deployment config.
+  // GitHub pages deployment config.git
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'effortlessdevsec', // Usually your GitHub org/user name.
   projectName: 'effortlesssecurity', // Usually your repo name.
