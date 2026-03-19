@@ -10,6 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'EffortlessSecurity',
   tagline: 'Security research, blog, and portfolio for modern builders',
+  // Tab icon — replace static/img/favicon.ico with your own .ico / .png if it still shows the Docusaurus default.
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -98,13 +99,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // Default Open Graph / Twitter preview when a page does not set `image` in front matter.
+      // Do not use `docusaurus-social-card.jpg` — that is the stock Dinosaur card.
+      image: 'img/effortlesssecurity.png',
       navbar: {
         title: 'EffortlessSecurity',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'EffortlessSecurity',
+          // Replace static/img/logo.svg with your mark if it is still the Docusaurus template logo.
+          src: 'img/effortlesssecurity.png',
         },
         items: [
           {to: '/portfolio', label: 'Portfolio', position: 'left'},
