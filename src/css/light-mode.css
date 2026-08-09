@@ -1,0 +1,125 @@
+/**
+ * Light mode readability fixes
+ */
+
+:root {
+  --es-accent-soft: rgba(22, 163, 74, 0.1);
+  --es-accent-softer: rgba(22, 163, 74, 0.06);
+
+  /* Infima / Docusaurus — ensure readable text in light mode */
+  --ifm-font-color-base: #0a0f0a;
+  --ifm-font-color-secondary: #4b5563;
+  --ifm-heading-color: #0a0f0a;
+  --ifm-color-content: #374151;
+  --ifm-color-content-secondary: #4b5563;
+  --ifm-menu-color: #4b5563;
+  --ifm-menu-color-active: #15803d;
+  --ifm-menu-color-background-hover: rgba(22, 163, 74, 0.06);
+  --ifm-menu-color-background-active: rgba(22, 163, 74, 0.1);
+  --ifm-navbar-link-color: #0a0f0a;
+  --ifm-navbar-link-hover-color: #15803d;
+  --ifm-link-color: #15803d;
+  --ifm-link-hover-color: #166534;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-color-emphasis-0: #ffffff;
+  --ifm-color-emphasis-100: #f4f6f4;
+  --ifm-color-emphasis-200: #e8ece8;
+  --ifm-color-emphasis-300: #d1d9d1;
+  --ifm-color-emphasis-700: #374151;
+  --ifm-color-emphasis-800: #1f2937;
+  --ifm-color-emphasis-900: #0a0f0a;
+  --ifm-hover-overlay: rgba(22, 163, 74, 0.06);
+}
+
+[data-theme='dark'] {
+  --es-accent-soft: rgba(63, 185, 80, 0.1);
+  --es-accent-softer: rgba(63, 185, 80, 0.06);
+
+  --ifm-font-color-base: #e6edf3;
+  --ifm-font-color-secondary: #7d8590;
+  --ifm-heading-color: #e6edf3;
+  --ifm-color-content: #c9d1d9;
+  --ifm-color-content-secondary: #7d8590;
+  --ifm-menu-color: #7d8590;
+  --ifm-menu-color-active: #3fb950;
+  --ifm-navbar-link-color: #e6edf3;
+  --ifm-link-color: #3fb950;
+}
+
+/* Navbar links readable in light mode */
+[data-theme='light'] .navbar__link {
+  color: #0a0f0a;
+}
+
+[data-theme='light'] .navbar__link:hover,
+[data-theme='light'] .navbar__link--active {
+  color: #15803d;
+}
+
+/* No invisible gradient text in light mode */
+[data-theme='light'] .theme-doc-markdown > h1:first-child,
+[data-theme='light'] [class*='generatedIndexPage'] header h1 {
+  color: #0a0f0a !important;
+  background: none !important;
+  -webkit-text-fill-color: #0a0f0a !important;
+}
+
+/* Admonitions — body text must contrast on light tinted bg */
+[data-theme='light'] .theme-admonition,
+[data-theme='light'] .theme-admonition div[class*='admonitionContent'] {
+  color: #1f2937;
+}
+
+[data-theme='light'] .theme-admonition .theme-admonition-heading,
+[data-theme='light'] .theme-admonition h5 {
+  color: #0a0f0a;
+}
+
+[data-theme='light'] .theme-admonition div[class*='admonitionContent'] p,
+[data-theme='light'] .theme-admonition div[class*='admonitionContent'] li,
+[data-theme='light'] .theme-admonition div[class*='admonitionContent'] strong {
+  color: #374151;
+}
+
+[data-theme='light'] .alert--tip {
+  background: rgba(22, 163, 74, 0.08) !important;
+}
+
+[data-theme='light'] .alert--info {
+  background: rgba(37, 99, 235, 0.08) !important;
+}
+
+[data-theme='light'] .alert--warning,
+[data-theme='light'] .alert--caution {
+  background: rgba(217, 119, 6, 0.08) !important;
+}
+
+/* Sidebar menu — Infima defaults can wash out in light */
+[data-theme='light'] .theme-doc-sidebar-container .menu__link {
+  color: #4b5563;
+}
+
+[data-theme='light'] .theme-doc-sidebar-container .menu__link:hover {
+  color: #0a0f0a;
+}
+
+[data-theme='light'] .theme-doc-sidebar-container .menu__link--sublist {
+  color: #0a0f0a;
+}
+
+/* Doc markdown h2 section tint for light */
+[data-theme='light'] .theme-doc-markdown h2 {
+  background: linear-gradient(90deg, rgba(22, 163, 74, 0.08) 0%, transparent 100%);
+  color: #0a0f0a;
+}
+
+/* Inline code in articles */
+[data-theme='light'] .theme-doc-markdown code {
+  color: #15803d;
+  background: #e8ece8;
+}
+
+/* Pagination labels */
+[data-theme='light'] .pagination-nav__label {
+  color: #0a0f0a;
+}

@@ -1,0 +1,51 @@
+.panel {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--es-card-bg);
+  border: 1px solid var(--es-border);
+}
+
+.heading {
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--es-text-muted);
+}
+
+.stats {
+  margin: 0 0 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--es-border);
+}
+
+.stat dt {
+  margin: 0 0 0.25rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--es-text-muted);
+  line-height: 1.4;
+}
+
+.stat dd {
+  margin: 0;
+  font-family: var(--es-font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--es-text);
+  letter-spacing: -0.02em;
+}
+
+.note {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--es-text-muted);
+}

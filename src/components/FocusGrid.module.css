@@ -1,0 +1,77 @@
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 0;
+  background: var(--es-section-alt);
+  border-bottom: 1px solid var(--es-border);
+}
+
+.head { margin-bottom: 1.5rem; }
+
+.label {
+  margin: 0 0 0.4rem;
+  font-family: var(--es-font-mono);
+  font-size: 0.78rem;
+  color: var(--es-text-muted);
+}
+
+.head h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--es-text);
+  letter-spacing: -0.02em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.card {
+  display: flex;
+  gap: 0.65rem;
+  padding: 1.15rem;
+  border-radius: 6px;
+  background: var(--es-card-bg);
+  border: 1px solid var(--es-border);
+  border-left: 2px solid var(--es-accent);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--es-accent);
+  border-left-color: var(--es-accent);
+  box-shadow: 0 0 20px var(--es-glow);
+}
+
+.prefix {
+  font-family: var(--es-font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--es-accent);
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--es-text);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--es-text-muted);
+}
+
+@media screen and (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 560px) {
+  .grid { grid-template-columns: 1fr; }
+}

@@ -1,11 +1,10 @@
 {
   "label": "Learn Devsecops",
-  "collapsible": false,
-  "collapsed": false,
-  "className": "red",
   "position": 2,
+  "collapsible": true,
+  "collapsed": false,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "Practical DevSecOps guides — CI/CD security, SCA, supply chain, and GitHub Actions."
   }
 }

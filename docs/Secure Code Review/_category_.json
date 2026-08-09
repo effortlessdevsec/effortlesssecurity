@@ -1,0 +1,10 @@
+{
+  "label": "Secure Code Review",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "SAST, static analysis, and secure code review — from AST to exploitability."
+  }
+}

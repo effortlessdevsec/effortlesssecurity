@@ -1,0 +1,71 @@
+.page {
+  min-height: 100%;
+  padding-bottom: 3rem;
+  background-color: var(--es-bg);
+  background-image:
+    linear-gradient(var(--es-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--es-grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.header {
+  padding: 3.5rem 0 2rem;
+  border-bottom: 1px solid var(--es-border);
+  background: linear-gradient(180deg, var(--es-section-alt) 0%, transparent 100%);
+}
+
+.label {
+  margin: 0 0 0.5rem;
+  font-family: var(--es-font-mono);
+  font-size: 0.78rem;
+  color: var(--es-accent);
+  letter-spacing: 0.06em;
+}
+
+.header h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--es-text);
+  letter-spacing: -0.03em;
+}
+
+:global([data-theme='light']) .header h1 {
+  color: #0a0f0a;
+}
+
+.desc {
+  max-width: 38rem;
+  margin: 0 0 1.5rem;
+  color: var(--es-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.45rem 0.95rem;
+  border-radius: 4px;
+  background: var(--es-card-bg);
+  border: 1px solid var(--es-border);
+  color: var(--es-text-muted);
+  font-family: var(--es-font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--es-accent);
+  color: var(--es-accent);
+}
+
+.chipOn {
+  background: var(--es-accent-soft, rgba(22, 163, 74, 0.1));
+  border-color: var(--es-accent);
+  color: var(--es-accent);
+}

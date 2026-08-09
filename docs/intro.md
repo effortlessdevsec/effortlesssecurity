@@ -35,10 +35,11 @@ Research-driven material related to Android, iOS, mobile testing approaches, and
 
 If you want to begin quickly, explore these pages:
 
-- [Overview About Github Actions](/effortlesssecurity/Learn%20Devsecops/Overview%20About%20Github%20Actions)
-- [Source Composition Analysis](/effortlesssecurity/Learn%20Devsecops/SCA%20IN%20DEVSECOPS)
-- [Supply Chain Security](/effortlesssecurity/supply%20chain%20security)
-- [Portfolio](/effortlesssecurity/portfolio)
+- [Overview About GitHub Actions](/learn-devsecops/github-actions-overview)
+- [Source Composition Analysis](/learn-devsecops/sca-in-devsecops)
+- [Supply Chain Security](/learn-devsecops/supply-chain-security)
+- [Core Pillars of SAST](/secure-code-review/core-pillars-of-sast)
+- [Portfolio](/portfolio)
 
 ## About this blog
 

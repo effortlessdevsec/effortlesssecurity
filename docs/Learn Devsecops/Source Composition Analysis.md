@@ -1,11 +1,10 @@
 ---
 sidebar_position: 1
-slug: SCA IN DEVSECOPS
+slug: /learn-devsecops/sca-in-devsecops
 title: Source Composition Analysis
 authors: [Amit]
 tags: [devsecops, Github]
 ---
-
 
 ![SCA in DevSecops](./images/sca0.png)
 
@@ -31,7 +30,7 @@ Software Composition Analysis (SCA) is crucial because it manages security risks
 - **License Compliance**: Verifies that all dependencies meet licensing standards, helping avoid legal complications.
 - **Regular Updates**: Identifies outdated components, ensuring dependencies are patched and updated for optimal security.
 
-         ![ci2](./images/sc2.png)
+![ci2](./images/sc2.png)
 
 ## How SCA Tools Work?
 
@@ -100,12 +99,7 @@ jobs:
           path: snyk.sarif
 ```
 
-
 ![ci](./images/sca4.png)
-
-
-
-
 
 ### TOOLS 
 Most commercial SCA tools support multiple programming languages like Java, Python, Ruby, Go, PHP,.NET,Scala and license scans.

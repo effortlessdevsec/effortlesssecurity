@@ -10,8 +10,8 @@ keywords:
   - supply chain security
   - devsecops
 tags: [supply chain security,devsecops]
-image: https://2smart.com/wp-content/uploads/2023/06/006-optimized.png'
-slug: /supply chain security
+image: https://2smart.com/wp-content/uploads/2023/06/006-optimized.png
+slug: /learn-devsecops/supply-chain-security
 last_update:
   date: 06/11/2024
   author: Amit kumar
@@ -21,11 +21,7 @@ last_update:
 
 # Why Software Supply Chain Security Matters ?
 
-
-
 ![Software Supply Chain Security](./images/supply1.png)
-
-
 
 <!-- import TOCInline from '@theme/TOCInline';
 
@@ -112,8 +108,6 @@ Understanding common software supply chain attack methods and multi-layered scan
 Securing the software supply chain involves implementing several key strategies and best practices to reduce the risks associated with dependencies, third-party code, build processes, and more. Here are some essential steps to secure the software supply chain:
 
 ![Software Supply Chain Security](./images/supplychain.png)
-
-
 
 1. **Manage Dependencies Carefully**
    - **Use Trusted Sources**: Always source dependencies from reputable and trusted package managers or repositories (e.g., npm, Maven, PyPI).

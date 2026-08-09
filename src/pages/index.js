@@ -2,31 +2,11 @@ import React, {useState} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import BlogShowcase from '@site/src/components/BlogShowcase';
+import TerminalCard from '@site/src/components/TerminalCard';
+import FocusGrid from '@site/src/components/FocusGrid';
+import BlogShowcase, {categories} from '@site/src/components/BlogShowcase';
+import SeriesBrowse from '@site/src/components/SeriesBrowse';
 import styles from './index.module.css';
-
-const categoryCards = ['All', 'Learn DevSecOps', 'DevSecOps', 'GitHub', 'Supply Chain Security'];
-const heroStats = [
-  {value: '6+', label: 'Years in product security'},
-  {value: '5+', label: 'Open-source tool contributions'},
-  {value: '100+', label: 'Bug bounty recognitions'},
-];
-const heroHighlights = [
-  'Application Security',
-  'DevSecOps',
-  'Threat Modeling',
-  'Mobile Security',
-];
-const heroSignals = ['AI Security'];
-
-function SectionHeading({title, description, center = false}) {
-  return (
-    <div className={center ? styles.sectionHeadingCenter : styles.sectionHeading}>
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
-  );
-}
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -34,105 +14,85 @@ export default function Home() {
 
   return (
     <Layout
-      title={`${siteConfig.title} | Blog and Portfolio`}
-      description="A modern security blog and portfolio focused on DevSecOps, mobile testing, and practical research.">
-      <main>
-        <section className={styles.heroSection}>
+      title={`${siteConfig.title} | Security Blog & Portfolio`}
+      description="Practical security writing on AppSec, DevSecOps, threat modeling, and mobile testing by Amit Kumar.">
+      <main className={styles.page}>
+        <div className={styles.gridBg} aria-hidden="true" />
+
+        <section className={styles.hero}>
           <div className="container">
-            <div className={styles.heroPanel}>
-              <div className={styles.heroContent}>
-                <span className={styles.heroEyebrow}>Amit Kumar · Senior Product Security Engineer</span>
-                <h1>Practical security writing for engineers building modern products.</h1>
-                <p>
-                  Sharing hands-on notes across AppSec, DevSecOps, threat modeling, secure code
-                  review, cloud security, and mobile application testing.
+            <div className={styles.heroInner}>
+              <div className={styles.heroCopy}>
+                <p className={styles.kicker}>
+                  <span className={styles.prompt}>$</span> whoami
                 </p>
-                <div className={styles.heroHighlights}>
-                  {heroHighlights.map((item) => (
-                    <span key={item} className={styles.heroHighlightChip}>
-                      {item}
-                    </span>
-                  ))}
+                <h1 className={styles.title}>
+                  Offensive mindset.
+                  <br />
+                  <span className={styles.titleAccent}>Defensive craft.</span>
+                </h1>
+                <p className={styles.subtitle}>
+                  I'm Amit — Senior Product Security Engineer. I write about finding
+                  flaws in design, code, and pipelines before adversaries do. AppSec,
+                  DevSecOps, mobile testing, and secure architecture.
+                </p>
+                <div className={styles.actions}>
+                  <Link className="button button--primary button--lg" to="/blog">
+                    {'>'} Read articles
+                  </Link>
+                  <Link className="button button--outline button--lg" to="/portfolio">
+                    {'>'} Portfolio
+                  </Link>
                 </div>
-                <div className={styles.heroSignalRow}>
-                  {heroSignals.map((item) => (
-                    <span key={item} className={styles.heroSignalPill}>
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className={styles.heroVisual}>
-                <div className={styles.heroOrb} />
-                <div className={styles.heroGridGlow} />
-                <div className={styles.heroAccentCard}>
-                  <span className={styles.heroAccentLabel}>Security profile</span>
-                  <strong>
-                    Focused on product security, secure architecture, mobile AppSec, and scaling
-                    security across engineering teams.
-                  </strong>
-                  <div className={styles.heroStats}>
-                    {heroStats.map((item) => (
-                      <div key={item.label} className={styles.heroStatCard}>
-                        <span className={styles.heroStatValue}>{item.value}</span>
-                        <span className={styles.heroStatLabel}>{item.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p className={styles.heroAccentText}>
-                    Black Hat Arsenal Europe speaker, Seasides conference contributor, and builder of
-                    open-source security labs and learning resources.
-                  </p>
-                  <div className={styles.heroActionsRow}>
-                    <Link className="button button--primary button--lg" to="/portfolio">
-                      View Portfolio
-                    </Link>
-                    <Link className="button button--outline button--primary button--lg" to="/intro">
-                      Read Articles
-                    </Link>
-                  </div>
+                <div className={styles.tags}>
+                  <span>Black Hat Arsenal</span>
+                  <span>Seasides Conf</span>
+                  <span>BugBazaar</span>
                 </div>
               </div>
+              <TerminalCard />
             </div>
           </div>
         </section>
 
-        <section className={styles.quickLinksSection}>
+        <FocusGrid />
+
+        <section className={styles.filters}>
           <div className="container">
-            <div className={styles.categoryStrip}>
-              <div className={styles.categoryChips}>
-                {categoryCards.map((item) => (
-                  <button
-                    key={item}
-                    type="button"
-                    className={item === activeFilter ? `${styles.categoryChip} ${styles.categoryChipActive}` : styles.categoryChip}
-                    onClick={() => setActiveFilter(item)}>
-                    {item}
-                  </button>
-                ))}
-              </div>
+            <p className={styles.filterLabel}>{'// filter by topic'}</p>
+            <div className={styles.chips}>
+              {categories.map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  className={item === activeFilter ? `${styles.chip} ${styles.chipOn}` : styles.chip}
+                  onClick={() => setActiveFilter(item)}>
+                  {item}
+                </button>
+              ))}
             </div>
           </div>
         </section>
 
         <BlogShowcase activeFilter={activeFilter} />
+        <SeriesBrowse />
 
-        <section className={styles.sectionBlockAlt}>
+        <section className={styles.cta}>
           <div className="container">
-            <div className={styles.portfolioCta}>
-              <div>
-                <SectionHeading
-                  title="Beyond the articles"
-                  description="See the portfolio for open-source work, conference highlights, contributions, and technical strengths."
-                />
-                <p className={styles.portfolioCtaText}>
-                  The portfolio page stays separate so the homepage remains minimal, attractive, and
-                  centered on content discovery.
-                </p>
-              </div>
-              <div className={styles.portfolioCtaActions}>
-                <Link className="button button--primary button--lg" to="/portfolio">
-                  Open Portfolio
+            <div className={styles.ctaCard}>
+              <p className={styles.ctaPrompt}>{'$ ./connect.sh'}</p>
+              <h2>Open-source security work</h2>
+              <p>Android BugBazaar, ApkRecon, security labs — built in public on GitHub.</p>
+              <div className={styles.ctaBtns}>
+                <a
+                  className="button button--primary button--lg"
+                  href="https://github.com/effortlessdevsec"
+                  target="_blank"
+                  rel="noreferrer">
+                  {'>'} GitHub
+                </a>
+                <Link className="button button--outline button--lg" to="/portfolio">
+                  {'>'} Get in touch
                 </Link>
               </div>
             </div>

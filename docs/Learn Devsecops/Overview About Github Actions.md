@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: Overview About Github Actions
+slug: /learn-devsecops/github-actions-overview
 title: Overview About Github Actions
 authors: [Amit]
 tags: [devsecops, Github]
@@ -23,9 +23,8 @@ You can configure a GitHub Actions **workflow** to be triggered when an **eve
 ### CI(Continuous Integration)
 
 Continuous Integration (CI) is a development practice where developers regularly merge their code changes into a shared repository, typically multiple times a day. These changes are automatically tested and validated, ensuring that the new code integrates well with the existing codebase
+
 ![ci](./images/ci.png)
-
-
 
 **USE CASES**
 - Frequent Integration: Developers frequently merge code changes into a shared repository.
