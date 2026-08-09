@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 # Org policy: only actions from effortlessdevsec are allowed.
-# So this workflow uses zero third-party actions — pure shell only.
+# This workflow uses zero third-party actions — pure shell only.
 
 jobs:
   deploy:
@@ -30,27 +30,36 @@ jobs:
 
       - name: Install Node.js 20
         run: |
-          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-          sudo apt-get install -y nodejs
+          NODE_VERSION=20.18.1
+          curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" -o /tmp/node.tar.xz
+          sudo tar -xJf /tmp/node.tar.xz -C /usr/local --strip-components=1
           node -v
           npm -v
-          corepack enable
+          npm install -g yarn@1.22.22
           yarn -v
+          # Prefer this Node over any preinstalled runner Node
+          echo "/usr/local/bin" >> "$GITHUB_PATH"
 
       - name: Install dependencies
         working-directory: repo
-        run: yarn install --frozen-lockfile
+        run: |
+          hash -r
+          which node
+          node -v
+          yarn install --frozen-lockfile
 
       - name: Build site
         working-directory: repo
-        run: yarn build
+        run: |
+          hash -r
+          node -v
+          yarn build
 
       - name: Deploy to gh-pages
         working-directory: repo
         run: |
           set -euo pipefail
 
-          # Ensure CNAME is in the build output for custom domain
           if [ -f static/CNAME ]; then
             cp static/CNAME build/CNAME
           elif [ -f CNAME ]; then
@@ -60,7 +69,6 @@ jobs:
           fi
           touch build/.nojekyll
 
-          # Push build/ contents to gh-pages branch
           git clone --depth 1 --branch gh-pages \
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
             gh-pages-tmp || {
@@ -72,7 +80,6 @@ jobs:
               cd ..
             }
 
-          # Replace all files with new build
           find gh-pages-tmp -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
           cp -a build/. gh-pages-tmp/
 
