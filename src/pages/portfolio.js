@@ -47,19 +47,90 @@ const featuredProjects = [
   },
 ];
 
-const skills = [
-  {name: 'Application Security', level: 95},
-  {name: 'DevSecOps', level: 92},
-  {name: 'Android Pentesting', level: 94},
-  {name: 'iOS Pentesting', level: 84},
-  {name: 'Cloud Security', level: 82},
-  {name: 'Source Code Review', level: 91},
-  {name: 'Threat Modeling', level: 90},
-  {name: 'GitHub Actions', level: 88},
-  {name: 'CI/CD Security', level: 89},
-  {name: 'Reverse Engineering', level: 86},
-  {name: 'Secure SDLC', level: 93},
-  {name: 'Security Automation', level: 90},
+const skillGroups = [
+  {
+    id: 'sdlc',
+    label: 'SDLC Security',
+    cmd: '// sdlc-security',
+    description: 'Shift-left security across design, code, and release.',
+    skills: [
+      {name: 'Application Security', level: 95},
+      {name: 'Secure SDLC', level: 93},
+      {name: 'Source Code Review', level: 91},
+      {name: 'Threat Modeling', level: 90},
+    ],
+  },
+  {
+    id: 'supply',
+    label: 'Supply Chain & DevSecOps',
+    cmd: '// supply-chain',
+    description: 'Pipeline security, dependency trust, and CI/CD hardening.',
+    skills: [
+      {name: 'DevSecOps', level: 98},
+      {name: 'Security Automation', level: 98},
+      {name: 'CI/CD Security', level: 98},
+      {name: 'GitHub Actions', level: 98},
+      {name: 'SCA / SBOM', level: 98},
+    ],
+  },
+  {
+    id: 'ai',
+    label: 'AI & Agent Security',
+    cmd: '// ai-agent-security',
+    description: 'Securing AI systems, agents, and automated security workflows.',
+    skills: [
+      {name: 'AI Security Agents', level: 98},
+      {name: 'Automated Code Review Agents', level: 98},
+      {name: 'LLM App Security', level: 98},
+      {name: 'Prompt & Tool Abuse', level: 98},
+    ],
+  },
+  {
+    id: 'mobile',
+    label: 'Mobile Security',
+    cmd: '// mobile-security',
+    description: 'Android, iOS, and reverse engineering depth.',
+    skills: [
+      {name: 'Android Pentesting', level: 98},
+      {name: 'Reverse Engineering', level: 98},
+      {name: 'iOS Pentesting', level: 98},
+    ],
+  },
+  {
+    id: 'web',
+    label: 'Web Security',
+    cmd: '// web-security',
+    description: 'Web apps, APIs, and modern browser attack surfaces.',
+    skills: [
+      {name: 'Web Application Security', level: 98},
+      {name: 'API Security', level: 98},
+      {name: 'OWASP / VAPT', level: 98},
+      {name: 'AuthN / AuthZ Review', level: 98},
+    ],
+  },
+  {
+    id: 'cloud',
+    label: 'Cloud Security',
+    cmd: '// cloud-security',
+    description: 'Cloud posture, identity, and environment hardening.',
+    skills: [
+      {name: 'Cloud Security', level: 82},
+      {name: 'IAM & Access Control', level: 80},
+      {name: 'CSPM / Misconfig Review', level: 78},
+    ],
+  },
+  {
+    id: 'leadership',
+    label: 'Leadership & Delivery',
+    cmd: '// leadership',
+    description: 'Driving secure outcomes with teams and stakeholders.',
+    skills: [
+      {name: 'Security Consulting', level: 92},
+      {name: 'Secure-by-Design Adoption', level: 90},
+      {name: 'Cross-team Enablement', level: 88},
+      {name: 'Mentoring Engineers', level: 86},
+    ],
+  },
 ];
 
 const contributions = [
@@ -549,27 +620,40 @@ export default function PortfolioPage() {
             <SectionHeader
               eyebrow="skills"
               title="Core strengths"
-              description="Depth across AppSec, DevSecOps, mobile testing, and security automation."
+              description="Grouped by domain — SDLC, supply chain, AI agents, web, mobile, cloud, and leadership."
             />
             <div
               ref={skillsRef}
-              className={`${styles.skillsPanel} ${styles.reveal} ${skillsActive ? styles.skillsActive : ''}`}>
-              {skills.map((skill, index) => (
-                <div
-                  key={skill.name}
-                  className={styles.skillMeter}
-                  style={{'--skill-index': index}}>
-                  <div className={styles.skillMeterHeader}>
-                    <span>{skill.name}</span>
-                    <strong>{skill.level}%</strong>
+              className={`${styles.skillsGrid} ${skillsActive ? styles.skillsActive : ''}`}>
+              {skillGroups.map((group, groupIndex) => (
+                <article
+                  key={group.id}
+                  className={`${styles.skillGroup} ${styles.reveal}`}
+                  style={{'--reveal-index': groupIndex}}
+                  data-group={group.id}>
+                  <p className={styles.skillGroupCmd}>{group.cmd}</p>
+                  <h3 className={styles.skillGroupTitle}>{group.label}</h3>
+                  <p className={styles.skillGroupDesc}>{group.description}</p>
+                  <div className={styles.skillMeters}>
+                    {group.skills.map((skill, skillIndex) => (
+                      <div
+                        key={skill.name}
+                        className={styles.skillMeter}
+                        style={{'--skill-index': groupIndex * 4 + skillIndex}}>
+                        <div className={styles.skillMeterHeader}>
+                          <span>{skill.name}</span>
+                          <strong>{skill.level}%</strong>
+                        </div>
+                        <div className={styles.skillTrack}>
+                          <div
+                            className={styles.skillFill}
+                            style={{'--skill-level': `${skill.level}%`}}>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <div className={styles.skillTrack}>
-                    <div
-                      className={styles.skillFill}
-                      style={{'--skill-level': `${skill.level}%`}}>
-                    </div>
-                  </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
