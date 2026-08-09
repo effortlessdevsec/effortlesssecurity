@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeffortlessdevsec=self.webpackChunkeffortlessdevsec||[]).push([[495],{1384:e=>{e.exports=JSON.parse('{"pageTitle":"Open Source Projects","pageDescription":"Open-source security tools and research by Amit Kumar."}')}}]);
