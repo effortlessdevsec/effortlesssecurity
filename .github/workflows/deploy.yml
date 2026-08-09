@@ -1,0 +1,90 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-gh-pages
+  cancel-in-progress: true
+
+# Org policy: only actions from effortlessdevsec are allowed.
+# So this workflow uses zero third-party actions — pure shell only.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        run: |
+          git clone --depth 1 \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            repo
+          cd repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Install Node.js 20
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          node -v
+          npm -v
+          corepack enable
+          yarn -v
+
+      - name: Install dependencies
+        working-directory: repo
+        run: yarn install --frozen-lockfile
+
+      - name: Build site
+        working-directory: repo
+        run: yarn build
+
+      - name: Deploy to gh-pages
+        working-directory: repo
+        run: |
+          set -euo pipefail
+
+          # Ensure CNAME is in the build output for custom domain
+          if [ -f static/CNAME ]; then
+            cp static/CNAME build/CNAME
+          elif [ -f CNAME ]; then
+            cp CNAME build/CNAME
+          else
+            echo "effortlesssecurity.in" > build/CNAME
+          fi
+          touch build/.nojekyll
+
+          # Push build/ contents to gh-pages branch
+          git clone --depth 1 --branch gh-pages \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            gh-pages-tmp || {
+              mkdir gh-pages-tmp
+              cd gh-pages-tmp
+              git init
+              git checkout -b gh-pages
+              git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+              cd ..
+            }
+
+          # Replace all files with new build
+          find gh-pages-tmp -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a build/. gh-pages-tmp/
+
+          cd gh-pages-tmp
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to deploy."
+            exit 0
+          fi
+
+          git commit -m "Deploy website - ${{ github.sha }}"
+          git push -f origin HEAD:gh-pages
