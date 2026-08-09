@@ -8,7 +8,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://effortlesssecurity.in',
-  baseUrl: '/effortlesssecurity/',
+  baseUrl: '/',
 
   organizationName: 'effortlessdevsec',
   projectName: 'effortlesssecurity',
